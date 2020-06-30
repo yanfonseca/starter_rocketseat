@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset ='UTF-8'>
+        <title>Curso Js</title>
+    </head>
+    <body>
+        <div id="app">
+            <input id='nome'/>
+
+        </div>
+        <script>
+            
+            //<a href = 'https://skylab.rocketseat.com.br/'>Site rockeatseat</a>
+            
+            //Cria tag a com o js.
+            var linkElement = document.createElement('a');
+            linkElement.setAttribute('href','https://skylab.rocketseat.com.br/');
+            linkElement.setAttribute('title','Site da rockeatseat');
+
+            var textElement = document.createTextNode('Site rocketseat, clique.');
+            linkElement.appendChild(textElement);
+            
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+            
+            //Deleta a tag input nome do html.
+            var inputElement = document.querySelector('#nome');
+            containerElement.removeChild(inputElement);
+
+        </script>
+    </body>
+</html>
