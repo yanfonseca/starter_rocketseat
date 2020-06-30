@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset ='UTF-8'>
+        <title>Curso Js</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type ='Text' name = 'nome' id ='nome' class = 'nome' />
+            <input type ='Text' name = 'nome' id ='nome2' class = 'nome' />
+            <button class = 'botao'>adicionar</button>
+        </div>
+
+        <script>
+            //Referenciar elemento da árvore doom, usando document.getElement(); dentro de document está a árvore.
+            //Retorna 1 valor, o id;
+            //A id é única.
+
+            //retorna id
+            var inputElement = document.getElementById('nome2');
+            //console.log('id', inputElement);
+            
+            //.getElementsByTagName sempre retorna vetor.
+            var inputElement = document.getElementsByTagName('input');
+            //console.log('input', inputElement);
+            //Acessando posição do vetor
+            //console.log('input', inputElement[0]);
+            
+            //.getElementsByClassName sempreretorna vetor.
+            var inputElement = document.getElementsByClassName('nome');
+            console.log('input', inputElement);
+        </script>
+    </body>
+</html>

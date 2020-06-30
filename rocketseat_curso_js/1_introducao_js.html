@@ -6,12 +6,12 @@
     </head>
     <body>
         <script>
-            // javascript - deve ser o último elemento antes de fechar o body
+            //A tag javascript deve ser o último elemento antes de fechar o body.
             
             //Variáveis e dados
             console.log("Hello World");
             
-            //Variáveis
+            //Declaração de ariváveis
             var ano = 2020;
             var local = 'BR';
             var ddd = 21;
@@ -19,7 +19,7 @@
             //Lista
             var bairros = ['Tijuca', 'Flamengo', 'Botafogo'];
             
-            //Objeto
+            //Objeto: para acessar -> bairro.ano, bairro.local
             var bairro = {
                 bairro: bairros[0],
                 ano: 2020, 
@@ -36,19 +36,21 @@
             //Operações matemáticas
             var x = 10;
             var y = 5;
-            var resultado1 = x + y
-            
-            // outra forma de declarar - declaração de números em sequência.
-            var x = 10, y = 15;
-            resultado2 = y % 10;
-            resultado2 *= 10
+            var resultado1 = x + y;
             
             //console.log(resultado1)
+            
+            //Outra forma de declarar. Declaração de variáveis em sequência.
+            var x = 10, y = 15;
+            resultado2 = y % 10;
+            resultado2 *= 10;
+            
             //console.log(resultado2 )
 
             //Funções
-            //A variavel var só é vista dentro do seu próprio escopo.
-            //Sem o ; após {}.
+            //A variável var só é vista dentro do seu próprio escopo.
+            //Não adiciona ";" depois que fechar chaves "{}".
+
             function soma(num1, num2){
                 var resultado = num1 + num2;
                 return resultado;
@@ -57,18 +59,18 @@
             var resultado = soma(1, 2);
             
             //console.log(resultado);
-            //console.log(soma('a', 'b'))
+            //console.log(soma('a', 'b'));
 
             //Condicionais
-            //Com == analisa se os valores das variáveis são iguais.
-            // 1 == '1' true
-            //Com === analisa se os valores e tipos são iguais.
-            // 1 === '1' false 
+            //Com "=="" analisa se os valores das variáveis são iguais.
+            //1 "==" '1' true
+            //Com "==="" analisa se os valores e tipos são iguais.
+            //1 === '1' false 
+            // true e false em js são em lowercase
+            
             function retornaSexo1(sexo){
-                //M,f
-                //Masculino, Feminino
-                
-                // () após if, else if e else.
+                //M, F - Masculino, Feminino
+                //Parentes "()"" após if, else if para .
                 if (sexo === 'M'){
                     return 'Masculino';
                 } else if (sexo == 'F'){
@@ -77,67 +79,71 @@
                     return 'outro';
                 }
             }
+
+            var resultado = retornaSexo1('M');
+            //console.log(resultado);
             
-            // Para o ultimo, qualquer outra coisa, usar default.
+            // Para o último case usar default.
             function retornaSexo2(sexo){
                 switch (sexo){
                     case 'M':
                         return 'Masculino';
                     case 'F':
                         return 'Feminino';
-                    
                     default:
-                        return 'outro'
+                        return 'outro';
                 }
             }
-
-            //var resultado = retornaSexo1('J');
-            //console.log(resultado);
             //resultado = retornaSexo2('J');
             //console.log(resultado);
 
             //Operadores lógicos
-            //and && , or ||, not !==
+            //and &&  
+            //or || 
+            //not equal !==
 
             var sexo = 'F', idade = 18;
             var masculino;
 
             if (sexo === 'M' && idade >= 18){
-                //console.log('Ok');
+                //console.log('Ok.');
                 masculino = true;
             }else if (sexo === 'F' && idade === 17){
-                //console.log('Not ok');
+                //console.log('Not ok.');
                 masculino = false;
             }else if (sexo !== 'M'){
                 masculino = true;
-                //console.log('É fem.');
+                //console.log('É feminino.');
             }
             
             //console.log(masculino);
             
-            sexo = 'M', idade = 18
+            sexo = 'M';
+            idade = 18;
             
             // outra forma de fazer true e false
             var masculino = (sexo === 'M' && idade === 18);
             
-            //console.log('ulitmo',sexo, masculino);
+            //console.log('ulitmo: ', sexo, masculino);
 
-            
             // Condição ternária
-            // if com duas condições somente.
+            // if com somente duas condições.
             
             var sexo ='M';
-            
             function teste(sexo){
                 if (sexo === 'M'){
-                    return 'MASCULINO'
+                    return 'MASCULINO';
                 }else{
-                    return 'FEMININO'
+                    return 'FEMININO';
                 }
             }
 
             var retorno = teste('F');
             //console.log(retorno)     
+            
+            //Outra forma para resolver condição ternária. 
+            //variavel = (condição) ? 'opção1': 'opção2';
+            
             var retorno = (sexo ==='M') ? 'masculino': 'feminino';
             //console.log(retorno)
             
@@ -147,7 +153,7 @@
                 //console.log(i);
             }
             
-            //Para quando não souber o tamanho do intervalo.
+            //Para quando não souber o tamanho do intervalo, while.
             var j = 2000
             while (j > 10){
                 //console.log(j);
@@ -155,13 +161,19 @@
             }
 
             // Intervalo e timeout
-            
+            var i = 0;
             function exibeAlgo(){
                 console.log('Hello world');
-
+                console.log(i++);
             }
-            //funcao sem parentes passa a funçao, todo o escopo
-            setTimeout(exibeAlgo, 1000);
+
+            //funcao sem parentes passa a funçao(todo o escopo da função) e executa a cada 1 segundo.
+            
+            //Após 5 segundos roda a função
+            //setTimeout(exibeAlgo, 5000);
+            
+            //Após 1 segundo roda a função recursivamente.
+            //setInterval(exibeAlgo, 1000);
 
             //
 

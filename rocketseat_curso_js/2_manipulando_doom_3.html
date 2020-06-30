@@ -3,7 +3,6 @@
         <meta charset ='UTF-8'>
         <title>Curso Js</title>
     </head>
-
     <body>
         <div id="app">
             <input type ='Text' name = 'nome' id ='nome' class = 'nome' />
@@ -11,44 +10,30 @@
             <button class = 'botao'>adicionar</button>
             <button class = 'botao'>adicionar</button>
         </div>
-
         <script>
-            //referenciar elemento da árvore doom, document.getElement...
-            //retorna 1 valor, o id
-            var inputElement = document.getElementById('nome');
-            console.log('id', inputElement);
-            
-            //sempre retorna vetor
-            var inputElement = document.getElementsByTagName('input')[0];
-            console.log('input', inputElement);
-            
-            //Usando o # do css
+            //Usando o # do css pare referenciar elemento.
             //O querySelector retorna 1 elemento, o querySelectorAll retorna todos
             var inputElement = document.querySelector('body div#app input');
-            console.log('query', inputElement);
+            //console.log('query1', inputElement);
             
             //Com [] referencia o nome
             var inputElement = document.querySelector('input[name=nome]');
-            console.log('query', inputElement);
+            console.log('query2', inputElement);
 
             //Com [] referencia o nome
             var inputElement = document.querySelectorAll('input[name=nome]');
-            console.log('query_all', inputElement);
+            //console.log('query_all', inputElement);
 
-
+            //Acessa elementos usando document.querySelector no caso
             var inputElement = document.querySelector('input[name=nome]');
             var btnElement = document.querySelector('button.botao');
             
-
-            // Fazendo desse jeito evita dificultar a escrita no meio do html
+            //Acessa btnElement onclick. Dessa forma facilita a escrita no meio do html.
             btnElement.onclick = function(){
-                var text = inputElement.value;
+                //pega texto do input
+                var text = inputElement.value; 
                 alert(text);
             }
-
-            console.log('query', btnElement);
-
-
         </script>
     </body>
 </html>
