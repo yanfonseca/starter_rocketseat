@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset ='UTF-8'>
+        <title>Curso Js</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <input type ='Text' name = 'nome' id ='nome' class = 'nome' />
+            <input type ='Text' name = 'nome' id ='nome2' class = 'nome' />
+            <button class = 'botao'>adicionar</button>
+            <button class = 'botao'>adicionar</button>
+        </div>
+
+        <script>
+            //referenciar elemento da árvore doom, document.getElement...
+            //retorna 1 valor, o id
+            var inputElement = document.getElementById('nome');
+            console.log('id', inputElement);
+            
+            //sempre retorna vetor
+            var inputElement = document.getElementsByTagName('input')[0];
+            console.log('input', inputElement);
+            
+            //Usando o # do css
+            //O querySelector retorna 1 elemento, o querySelectorAll retorna todos
+            var inputElement = document.querySelector('body div#app input');
+            console.log('query', inputElement);
+            
+            //Com [] referencia o nome
+            var inputElement = document.querySelector('input[name=nome]');
+            console.log('query', inputElement);
+
+            //Com [] referencia o nome
+            var inputElement = document.querySelectorAll('input[name=nome]');
+            console.log('query_all', inputElement);
+
+
+            var inputElement = document.querySelector('input[name=nome]');
+            var btnElement = document.querySelector('button.botao');
+            
+
+            // Fazendo desse jeito evita dificultar a escrita no meio do html
+            btnElement.onclick = function(){
+                var text = inputElement.value;
+                alert(text);
+            }
+
+            console.log('query', btnElement);
+
+
+        </script>
+    </body>
+</html>

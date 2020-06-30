@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <title>
+            Curso Javascript
+        </title>
+    </head>
+    <body>
+        <script>
+            // javascript - deve ser o último elemento antes de fechar o body
+            
+            //Variáveis e dados
+            console.log("Hello World");
+            
+            //Variáveis
+            var ano = 2020;
+            var local = 'BR';
+            var ddd = 21;
+            
+            //Lista
+            var bairros = ['Tijuca', 'Flamengo', 'Botafogo'];
+            
+            //Objeto
+            var bairro = {
+                bairro: bairros[0],
+                ano: 2020, 
+                local: 'BR', 
+                ddd: 21
+            };
+            
+            //console.log(bairros);
+            //console.log(bairros[0])
+            //console.log(ano, local, ddd);
+            //console.log(bairro.ano, bairro.ddd);
+            //console.log(bairro.bairro)
+            
+            //Operações matemáticas
+            var x = 10;
+            var y = 5;
+            var resultado1 = x + y
+            
+            // outra forma de declarar - declaração de números em sequência.
+            var x = 10, y = 15;
+            resultado2 = y % 10;
+            resultado2 *= 10
+            
+            //console.log(resultado1)
+            //console.log(resultado2 )
+
+            //Funções
+            //A variavel var só é vista dentro do seu próprio escopo.
+            //Sem o ; após {}.
+            function soma(num1, num2){
+                var resultado = num1 + num2;
+                return resultado;
+            }
+
+            var resultado = soma(1, 2);
+            
+            //console.log(resultado);
+            //console.log(soma('a', 'b'))
+
+            //Condicionais
+            //Com == analisa se os valores das variáveis são iguais.
+            // 1 == '1' true
+            //Com === analisa se os valores e tipos são iguais.
+            // 1 === '1' false 
+            function retornaSexo1(sexo){
+                //M,f
+                //Masculino, Feminino
+                
+                // () após if, else if e else.
+                if (sexo === 'M'){
+                    return 'Masculino';
+                } else if (sexo == 'F'){
+                    return 'Feminino';
+                } else {
+                    return 'outro';
+                }
+            }
+            
+            // Para o ultimo, qualquer outra coisa, usar default.
+            function retornaSexo2(sexo){
+                switch (sexo){
+                    case 'M':
+                        return 'Masculino';
+                    case 'F':
+                        return 'Feminino';
+                    
+                    default:
+                        return 'outro'
+                }
+            }
+
+            //var resultado = retornaSexo1('J');
+            //console.log(resultado);
+            //resultado = retornaSexo2('J');
+            //console.log(resultado);
+
+            //Operadores lógicos
+            //and && , or ||, not !==
+
+            var sexo = 'F', idade = 18;
+            var masculino;
+
+            if (sexo === 'M' && idade >= 18){
+                //console.log('Ok');
+                masculino = true;
+            }else if (sexo === 'F' && idade === 17){
+                //console.log('Not ok');
+                masculino = false;
+            }else if (sexo !== 'M'){
+                masculino = true;
+                //console.log('É fem.');
+            }
+            
+            //console.log(masculino);
+            
+            sexo = 'M', idade = 18
+            
+            // outra forma de fazer true e false
+            var masculino = (sexo === 'M' && idade === 18);
+            
+            //console.log('ulitmo',sexo, masculino);
+
+            
+            // Condição ternária
+            // if com duas condições somente.
+            
+            var sexo ='M';
+            
+            function teste(sexo){
+                if (sexo === 'M'){
+                    return 'MASCULINO'
+                }else{
+                    return 'FEMININO'
+                }
+            }
+
+            var retorno = teste('F');
+            //console.log(retorno)     
+            var retorno = (sexo ==='M') ? 'masculino': 'feminino';
+            //console.log(retorno)
+            
+            // Estruturas e repetição
+
+            for (var i = 0; i<= 100; i++){
+                //console.log(i);
+            }
+            
+            //Para quando não souber o tamanho do intervalo.
+            var j = 2000
+            while (j > 10){
+                //console.log(j);
+                j /= 5;
+            }
+
+            // Intervalo e timeout
+            
+            function exibeAlgo(){
+                console.log('Hello world');
+
+            }
+            //funcao sem parentes passa a funçao, todo o escopo
+            setTimeout(exibeAlgo, 1000);
+
+            //
+
+        </script>
+    </body>
+</html>

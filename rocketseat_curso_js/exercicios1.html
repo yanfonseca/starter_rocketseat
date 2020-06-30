@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Exercicios</title>
+    </head>
+    <body>
+
+        <script>
+            var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+            };
+
+            function retornaEndereco(obj){
+                var retorna;
+                
+                retorna ='O Usuário mora em ' + obj.cidade;
+                retorna += ' / ' + obj.uf
+                retorna += ', no bairro ' + obj.centro + ' , na rua "' + obj.rua +'" com n ' + obj.numero; 
+
+                console.log(retorna);
+
+            }
+
+            retornaEndereco(endereco);
+
+        </script>
+    </body>
+</html>
