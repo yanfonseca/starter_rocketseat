@@ -14,9 +14,9 @@
         1. [Parte-1](rocketseat_curso_js/3_app_de_to_do_1.html)
         1. [Parte-2](rocketseat_curso_js/3_app_de_to_do_2.html)
     1. JS assíncrono
-        1. [Assíncrono](4_js_assincrono.html)
-        1. [Promises](4_js_promises.html)
-        1. [Axios](4_js_axios.html)
-        1. [Exercícios - PDF](4_js_assincrono.pdf)
+        1. [Assíncrono](rocketseat_curso_js/4_js_assincrono.html)
+        1. [Promises](rocketseat_curso_js/4_js_promises.html)
+        1. [Axios](rocketseat_curso_js/4_js_axios.html)
+        1. [Exercícios - PDF](rocketseat_curso_js/4_js_assincrono.pdf)
         
     
